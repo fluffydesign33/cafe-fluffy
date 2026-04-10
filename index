@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Fluffy | 京都京北の猫カフェ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+```
+:root {
+  --moss:    #4a5c3f;
+  --sage:    #7a9168;
+  --cream:   #f5f0e8;
+  --sand:    #d9cdb8;
+  --bark:    #6b5040;
+  --mist:    #e8ede3;
+  --white:   #fdfcf9;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  background: var(--white);
+  color: var(--moss);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.4rem 2.5rem;
+  background: rgba(253,252,249,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(74,92,63,0.1);
+}
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; font-weight: 300; letter-spacing: .12em;
+  color: var(--moss);
+  text-decoration: none;
+}
+.logo span { font-style: italic; color: var(--sage); }
+nav a.reserve-btn {
+  font-size: .78rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--white); background: var(--moss);
+  padding: .55rem 1.4rem; border-radius: 2rem;
+  text-decoration: none;
+  transition: background .25s;
+}
+nav a.reserve-btn:hover { background: var(--bark); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100svh;
+  display: grid; place-items: center;
+  position: relative;
+  background: var(--mist);
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 80% 30%, rgba(122,145,104,.18) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(217,205,184,.35) 0%, transparent 60%);
+}
+/* decorative leaf rings */
+.ring {
+  position: absolute; border-radius: 50%;
+  border: 1px solid rgba(74,92,63,.12);
+  animation: spin linear infinite;
+}
+.ring-1 { width: 420px; height: 420px; top: -80px; right: -100px; animation-duration: 40s; }
+.ring-2 { width: 260px; height: 260px; bottom: 60px; left: -60px; animation-duration: 55s; animation-direction: reverse; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.hero-inner {
+  position: relative; z-index: 2;
+  text-align: center; padding: 2rem 1.5rem;
+  animation: fadeUp .9s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow {
+  font-size: .72rem; letter-spacing: .35em; text-transform: uppercase;
+  color: var(--sage); margin-bottom: 1.2rem;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.2rem, 9vw, 6.5rem);
+  font-weight: 300; line-height: 1.05;
+  color: var(--moss); margin-bottom: .6rem;
+}
+.hero h1 em { font-style: italic; color: var(--sage); }
+.hero-sub {
+  font-size: clamp(.85rem, 2vw, 1rem);
+  color: var(--bark); opacity: .8;
+  margin: 1rem auto 2.2rem; max-width: 320px; line-height: 1.8;
+}
+.cta-primary {
+  display: inline-block;
+  padding: .85rem 2.4rem;
+  background: var(--moss); color: var(--white);
+  border-radius: 3rem; text-decoration: none;
+  font-size: .82rem; letter-spacing: .18em; text-transform: uppercase;
+  transition: transform .2s, background .2s;
+  box-shadow: 0 4px 20px rgba(74,92,63,.25);
+}
+.cta-primary:hover { transform: translateY(-2px); background: var(--bark); }
+.scroll-hint {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: .5rem;
+  font-size: .65rem; letter-spacing: .25em; text-transform: uppercase;
+  color: var(--sage); opacity: .7;
+  animation: fadeUp 1s .5s ease both;
+}
+.scroll-hint::after {
+  content: '';
+  display: block; width: 1px; height: 40px;
+  background: linear-gradient(to bottom, var(--sage), transparent);
+  animation: lineGrow 1.5s ease infinite;
+}
+@keyframes lineGrow {
+  0%,100% { transform: scaleY(1); opacity: .7; }
+  50% { transform: scaleY(.5); opacity: .3; }
+}
+
+/* ── SECTION BASE ── */
+section { padding: 5rem 1.5rem; }
+.section-label {
+  font-size: .68rem; letter-spacing: .35em; text-transform: uppercase;
+  color: var(--sage); margin-bottom: .8rem;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300; line-height: 1.2;
+  color: var(--moss);
+}
+.section-title em { font-style: italic; }
+.section-body {
+  margin-top: 1rem; font-size: .9rem; line-height: 2;
+  color: var(--bark); max-width: 480px;
+}
+
+/* ── CONCEPT ── */
+.concept {
+  background: var(--white);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+  align-items: center; max-width: 960px; margin: 0 auto;
+}
+@media (max-width: 640px) { .concept { grid-template-columns: 1fr; } }
+.concept-visual {
+  aspect-ratio: 4/5;
+  background: var(--mist);
+  border-radius: 2px 2rem 2px 2rem;
+  position: relative; overflow: hidden;
+  display: grid; place-items: center;
+}
+.concept-visual .cat-emoji {
+  font-size: 6rem;
+  filter: drop-shadow(0 8px 24px rgba(74,92,63,.15));
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+.concept-visual::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(122,145,104,.08) 0%, transparent 60%);
+}
+
+/* ── CATS GRID ── */
+.cats-section { background: var(--mist); }
+.cats-section .inner { max-width: 960px; margin: 0 auto; }
+.cats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.2rem; margin-top: 2.5rem;
+}
+.cat-card {
+  background: var(--white); border-radius: 1rem;
+  padding: 1.5rem 1rem; text-align: center;
+  transition: transform .25s, box-shadow .25s;
+  cursor: default;
+}
+.cat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(74,92,63,.12);
+}
+.cat-card .emoji { font-size: 2.8rem; margin-bottom: .8rem; display: block; }
+.cat-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem; font-weight: 400; color: var(--moss);
+}
+.cat-card p { font-size: .78rem; color: var(--bark); margin-top: .3rem; line-height: 1.6; }
+
+/* ── PRICE ── */
+.price-section { background: var(--white); }
+.price-section .inner { max-width: 720px; margin: 0 auto; }
+.price-table {
+  margin-top: 2rem;
+  border: 1px solid var(--sand); border-radius: 1rem; overflow: hidden;
+}
+.price-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 1.5rem; border-bottom: 1px solid var(--sand);
+  font-size: .88rem;
+}
+.price-row:last-child { border-bottom: none; }
+.price-row:nth-child(even) { background: var(--mist); }
+.price-row .label { color: var(--bark); }
+.price-row .amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; color: var(--moss);
+}
+.price-note {
+  font-size: .75rem; color: var(--sage); margin-top: .8rem; line-height: 1.7;
+}
+
+/* ── ACCESS ── */
+.access-section { background: var(--mist); }
+.access-section .inner {
+  max-width: 720px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;
+}
+@media (max-width: 600px) { .access-section .inner { grid-template-columns: 1fr; } }
+.access-info dt {
+  font-size: .7rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--sage); margin-top: 1.2rem;
+}
+.access-info dd { font-size: .88rem; color: var(--bark); margin-top: .3rem; line-height: 1.7; }
+.map-placeholder {
+  aspect-ratio: 1;
+  background: var(--sand);
+  border-radius: 1rem;
+  display: grid; place-items: center;
+  font-size: 3rem; color: var(--moss); opacity: .4;
+}
+
+/* ── CTA BAND ── */
+.cta-band {
+  background: var(--moss);
+  text-align: center; padding: 5rem 1.5rem;
+}
+.cta-band h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 300; color: var(--cream); margin-bottom: .6rem;
+}
+.cta-band h2 em { font-style: italic; color: var(--sand); }
+.cta-band p { font-size: .85rem; color: rgba(245,240,232,.65); margin-bottom: 2rem; }
+.cta-band a {
+  display: inline-block;
+  padding: .9rem 2.6rem;
+  background: var(--cream); color: var(--moss);
+  border-radius: 3rem; text-decoration: none;
+  font-size: .82rem; letter-spacing: .18em; text-transform: uppercase;
+  font-weight: 400;
+  transition: transform .2s, background .2s;
+}
+.cta-band a:hover { transform: translateY(-2px); background: var(--white); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--bark);
+  color: rgba(245,240,232,.6);
+  text-align: center; padding: 2rem 1.5rem;
+  font-size: .75rem; letter-spacing: .1em;
+}
+footer strong { color: var(--cream); font-weight: 400; }
+```
+
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+
+<nav>
+  <a class="logo" href="#">Cafe <span>Fluffy</span></a>
+  <a class="reserve-btn" href="#reserve">予約する</a>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="ring ring-1"></div>
+  <div class="ring ring-2"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">京都 京北 / Cat Café</p>
+    <h1>Cafe<br><em>Fluffy</em></h1>
+    <p class="hero-sub">森の静けさの中で、<br>猫たちとゆるやかな時間を。</p>
+    <a class="cta-primary" href="#reserve">ご予約はこちら</a>
+  </div>
+  <div class="scroll-hint">scroll</div>
+</section>
+
+<!-- CONCEPT -->
+
+<section style="background:var(--white); padding: 5rem 1.5rem;">
+  <div class="concept">
+    <div class="concept-visual">
+      <span class="cat-emoji">🐈</span>
+    </div>
+    <div>
+      <p class="section-label">Our Concept</p>
+      <h2 class="section-title">自然と猫と、<br><em>ほっとする場所</em></h2>
+      <p class="section-body">
+        京都市内から車で約50分。京北の豊かな自然に抱かれた一軒家カフェです。<br>
+        ゆっくりと流れる時間の中で、個性豊かな猫たちとふれあってください。<br>
+        こだわりのドリンクとともに、日常を少し忘れる午後を。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CATS -->
+
+<section class="cats-section">
+  <div class="inner">
+    <p class="section-label">Our Cats</p>
+    <h2 class="section-title">在籍猫の<em>紹介</em></h2>
+    <div class="cats-grid">
+      <div class="cat-card">
+        <span class="emoji">🐱</span>
+        <h3>もふ</h3>
+        <p>スコティッシュ折れ耳。おっとりマイペース。なでられるのが大好き。</p>
+      </div>
+      <div class="cat-card">
+        <span class="emoji">🐈‍⬛</span>
+        <h3>くろまる</h3>
+        <p>ノルウェージャン。黒くてふわふわ。気分屋だけど慣れると甘えん坊。</p>
+      </div>
+      <div class="cat-card">
+        <span class="emoji">🐾</span>
+        <h3>きなこ</h3>
+        <p>アメリカンショートヘア。茶白トラ。一番人懐っこくてフレンドリー。</p>
+      </div>
+      <div class="cat-card">
+        <span class="emoji">🌿</span>
+        <h3>みどり</h3>
+        <p>白猫ミックス。緑の目が印象的。窓辺でひなたぼっこが日課。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+
+<section class="price-section">
+  <div class="inner">
+    <p class="section-label">Price</p>
+    <h2 class="section-title">料金<em>案内</em></h2>
+    <div class="price-table">
+      <div class="price-row">
+        <span class="label">30分</span>
+        <span class="amount">¥600</span>
+      </div>
+      <div class="price-row">
+        <span class="label">60分</span>
+        <span class="amount">¥1,000</span>
+      </div>
+      <div class="price-row">
+        <span class="label">90分</span>
+        <span class="amount">¥1,400</span>
+      </div>
+      <div class="price-row">
+        <span class="label">ワンドリンク（別途）</span>
+        <span class="amount">¥500〜</span>
+      </div>
+    </div>
+    <p class="price-note">
+      ※ 猫へのおやつ販売あり（¥200〜）<br>
+      ※ 小学生以下のお子様は保護者同伴でお願いします<br>
+      ※ 猫アレルギーの方はご注意ください
+    </p>
+  </div>
+</section>
+
+<!-- ACCESS -->
+
+<section class="access-section">
+  <div class="inner">
+    <div>
+      <p class="section-label">Access</p>
+      <h2 class="section-title">アクセス</h2>
+      <dl class="access-info">
+        <dt>住所</dt>
+        <dd>京都府京都市右京区京北〇〇町XX-XX</dd>
+        <dt>営業時間</dt>
+        <dd>10:00〜18:00（最終受付 17:00）</dd>
+        <dt>定休日</dt>
+        <dd>火曜・水曜</dd>
+        <dt>駐車場</dt>
+        <dd>あり（無料・5台）</dd>
+        <dt>アクセス</dt>
+        <dd>JR京都駅より車で約50分<br>周山バス停より徒歩5分</dd>
+      </dl>
+    </div>
+    <div class="map-placeholder">🗺</div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+
+<section class="cta-band" id="reserve">
+  <h2>森の中の猫たちに、<br><em>会いに来てください</em></h2>
+  <p>ご予約はお電話またはフォームから</p>
+  <a href="tel:0000-00-0000">予約する ›</a>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <strong>Cafe Fluffy</strong> &nbsp;|&nbsp; 京都府京都市右京区京北
+  &nbsp;|&nbsp; © 2026 Cafe Fluffy. All rights reserved.
+</footer>
+
+</body>
+</html>
