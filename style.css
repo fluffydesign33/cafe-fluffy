@@ -97,15 +97,11 @@ body {
   padding: 5rem 1.5rem;
 }
 
-.concept-visual {
-  position: relative;
-}
-
 .concept-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
+  position: relative;
   inset: 0;
 }
 
