@@ -6,84 +6,82 @@
   <title>Cafe Fluffy | 京都京北の猫カフェ</title>
   <meta name="description" content="京都京北の自然に囲まれた猫カフェ。黒猫じったんと癒しの時間を。">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:300;400&family=Zen+Kaku+Gothic+New:300;400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
-  <nav class="nav" aria-label="メインナビゲーション">
-    <a href="#" class="logo">Cafe <span>Fluffy</span></a>
-    <a href="#reserve" class="btn btn-primary">予約する</a>
+<header>
+  <nav aria-label="メインナビゲーション">
+    <a class="logo" href="#">Cafe <span>Fluffy</span></a>
+    <a class="reserve-btn" href="#reserve">予約する</a>
   </nav>
 </header>
 
 <main>
 
-  <!-- HERO -->
-  <section class="section hero">
-    <div class="hero-inner">
-      <p class="hero-eyebrow">京都 京北 / Cat Café</p>
-      <h1>Cafe <em>Fluffy</em></h1>
-      <p class="hero-sub">黒猫じったんと仲間たちが、森の中でお待ちしています。</p>
-      <a href="#reserve" class="btn btn-primary">ご予約はこちら</a>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="ring ring-1"></div>
+  <div class="ring ring-2"></div>
+
+  <div class="hero-inner">
+    <p class="hero-eyebrow">京都 京北 / Cat Café</p>
+    <h1>Cafe<br><em>Fluffy</em></h1>
+    <p class="hero-sub">黒猫じったんと仲間たちが、森の中でお待ちしています。</p>
+    <a class="cta-primary" href="#reserve">ご予約はこちら</a>
+  </div>
+
+  <div class="scroll-hint">scroll</div>
+</section>
+
+<section class="section-white">
+  <div class="concept">
+    <div class="concept-visual">
+      <img src="IMG_7199.jpeg" alt="黒猫じったん" class="concept-img">
     </div>
-  </section>
 
-  <!-- CONCEPT -->
-  <section class="section section-white">
-    <div class="container concept">
-      <div class="concept-visual">
-        <img src="IMG_7199.jpeg" alt="黒猫じったん" class="concept-img">
-      </div>
-      <div>
-        <p class="section-label">Our Concept</p>
-        <h2 class="section-title">自然と猫と、<em>ほっとする場所</em></h2>
-        <p class="section-body">
-          京都市内から車で約50分。京北の自然に囲まれた猫カフェです。
-        </p>
+    <div>
+      <p class="section-label">Our Concept</p>
+      <h2 class="section-title">自然と猫と、<br><em>ほっとする場所</em></h2>
+      <p class="section-body">
+        京都市内から車で約50分。京北の豊かな自然に抱かれた一軒家カフェです。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="cats-section">
+  <div class="inner">
+    <p class="section-label">Our Cats</p>
+    <h2 class="section-title">在籍猫の<em>紹介</em></h2>
+
+    <div class="cats-grid">
+      <div class="cat-card main">
+        <span class="cat-badge">看板猫</span>
+        <span class="emoji">🐈‍⬛</span>
+        <h3>じったん</h3>
+        <p>真っ黒でふわふわ。Cafe Fluffyの顔。</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CATS -->
-  <section class="section cats-section">
-    <div class="container">
-      <p class="section-label">Our Cats</p>
-      <h2 class="section-title">在籍猫の<em>紹介</em></h2>
-
-      <div class="grid">
-        <article class="card main">
-          <span class="badge">看板猫</span>
-          <h3>じったん</h3>
-          <p>真っ黒でふわふわの甘えん坊。</p>
-        </article>
-
-        <article class="card">
-          <h3>もふ</h3>
-          <p>おっとりマイペース。</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section id="reserve" class="section cta">
-    <h2>会いに来てください</h2>
-    <a href="tel:0000-00-0000" class="btn btn-secondary">予約する</a>
-  </section>
+<section id="reserve" class="cta-band">
+  <h2>会いに来てください</h2>
+  <a href="tel:0000-00-0000">予約する</a>
+</section>
 
 </main>
 
-<footer class="footer">
-  <p>© 2026 Cafe Fluffy</p>
+<footer>
+  <strong>Cafe Fluffy</strong> © 2026
 </footer>
 
-<!-- Floating CTA -->
-<a href="#reserve" class="floating-btn">予約</a>
+<!-- 追従ボタン -->
+<a href="#reserve" class="floating-reserve">予約</a>
 
 </body>
 </html>
