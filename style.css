@@ -91,16 +91,6 @@ body {
 
 /* ===== 追加修正 ===== */
 
-header nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-main {
-  margin-top: 80px;
-}
-
 /* インラインstyle排除 */
 .section-white {
   background: var(--white);
