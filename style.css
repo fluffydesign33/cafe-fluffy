@@ -221,7 +221,7 @@ ul {
 .hero__ring {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(139,58,82,.1);
+  border: 1.5px solid rgba(139,58,82,.1);
   animation: spin linear infinite;
 }
 
@@ -242,6 +242,7 @@ ul {
   position: relative;
   z-index: 2;
   text-align: center;
+  font-weight: 500;
   padding: 2rem 1.5rem;
   animation: fadeUp .9s ease both;
 }
@@ -262,6 +263,7 @@ ul {
 
 .hero__sub {
   font-size: clamp(.85rem, 2vw, 1rem);
+  font-weight: 500;
   color: var(--bark);
   opacity: .75;
   margin: 1rem auto 2.2rem;
@@ -279,6 +281,7 @@ ul {
   align-items: center;
   gap: .5rem;
   font-size: .65rem;
+  font-weight: 500;
   letter-spacing: .25em;
   text-transform: uppercase;
   color: var(--pink);
@@ -372,6 +375,7 @@ ul {
   background: var(--wine);
   color: var(--white);
   font-size: .6rem;
+  font-weight: 500;
   letter-spacing: .2em;
   padding: .2rem .8rem;
   border-radius: var(--radius-full);
@@ -387,12 +391,13 @@ ul {
 .cat-card__name {
   font-family: var(--font-serif);
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--bark);
 }
 
 .cat-card__desc {
   font-size: .78rem;
+  font-weight: 300;
   color: var(--bark);
   opacity: .72;
   margin-top: .3rem;
@@ -478,6 +483,7 @@ ul {
 
 .access__list dd {
   font-size: .88rem;
+  font-weight: 500;
   color: var(--bark);
   margin-top: .3rem;
   line-height: 1.7;
@@ -511,7 +517,7 @@ ul {
 .cta__title {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 300;
+  font-weight: 600;
   color: var(--cream);
   margin-bottom: .6rem;
 }
@@ -523,6 +529,7 @@ ul {
 
 .cta__sub {
   font-size: .85rem;
+  font-weight: 500;
   color: rgba(247,242,232,.65);
   margin-bottom: 2rem;
 }
@@ -536,10 +543,11 @@ ul {
   text-align: center;
   padding: 2rem 1.5rem;
   font-size: .75rem;
+  font-weight: 500;
   letter-spacing: .1em;
 }
 
 .site-footer strong {
   color: var(--cream);
-  font-weight: 400;
+  font-weight: 300;
 }
