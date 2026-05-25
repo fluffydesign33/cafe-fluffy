@@ -193,6 +193,17 @@ ul {
   text-decoration: none;
 }
 
+.nav__menu-link {
+  font-size: .78rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--bark);
+  text-decoration: none;
+  opacity: .7;
+  transition: opacity .2s;
+}
+.nav__menu-link:hover { opacity: 1; }
+
 .nav__logo span {
   font-style: italic;
   color: var(--wine);
