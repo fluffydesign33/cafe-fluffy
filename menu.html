@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Cafe Fluffy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav__logo" href="index.html">Cafe <span>Fluffy</span></a>
+      <a class="btn btn--primary" href="index.html#reserve">予約する</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ページヘッダー -->
+    <section class="page-hero">
+      <p class="eyebrow">Drink &amp; Sweets</p>
+      <h1 class="page-hero__title">Menu</h1>
+      <p class="page-hero__sub">じったんたちと過ごす時間に、<br>とっておきの一杯と甘いものを。</p>
+    </section>
+
+    <!-- ドリンク -->
+    <section class="menu-section" aria-labelledby="drink-title">
+      <div class="inner">
+        <div class="menu-section__header">
+          <p class="eyebrow">Drink</p>
+          <h2 class="section-title" id="drink-title">ドリンク</h2>
+        </div>
+        <ul class="menu-grid">
+          <li class="menu-card">
+            <div class="menu-card__emoji" aria-hidden="true">☕</div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">fluffy ラテ</h3>
+              <p class="menu-card__desc">京北の湧き水で淹れたエスプレッソに、ふわふわのミルクフォームをのせた看板ドリンク。</p>
+              <span class="menu-card__price">¥680</span>
+            </div>
+          </li>
+          <li class="menu-card">
+            <div class="menu-card__emoji" aria-hidden="true">🍵</div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">京番茶ラテ</h3>
+              <p class="menu-card__desc">京都産の番茶をベースにしたやさしい味わいのラテ。ほんのり燻香がクセになる。</p>
+              <span class="menu-card__price">¥650</span>
+            </div>
+          </li>
+          <li class="menu-card">
+            <div class="menu-card__emoji" aria-hidden="true">🫖</div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">森のハーブティー</h3>
+              <p class="menu-card__desc">京北の自然をイメージしたブレンドハーブティー。カモミール・レモンバーム・ミント。</p>
+              <span class="menu-card__price">¥600</span>
+            </div>
+          </li>
+          <li class="menu-card">
+            <div class="menu-card__emoji" aria-hidden="true">🍋</div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">レモネード</h3>
+              <p class="menu-card__desc">国産レモンをたっぷり使ったさわやかなレモネード。ホット・アイス選べます。</p>
+              <span class="menu-card__price">¥580</span>
+            </div>
+          </li>
+          <li class="menu-card">
+            <div class="menu-card__emoji" aria-hidden="true">🍫</div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">じったんコーヒー</h3>
+              <p class="menu-card__desc">深煎りの黒いコーヒー。じったんの毛並みのような、濃くてなめらかな味わい。</p>
+              <span class="menu-card__price">¥550</span>
+            </div>
+          </li>
+          <li class="menu-card">
+            <div class="menu-card__emoji" aria-hidden="true">🥛</div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">みどりのソーダ</h3>
+              <p class="menu-card__desc">マスカットとミントのグリーンソーダ。みどりちゃんの緑色の瞳からインスパイア。</p>
+              <span class="menu-card__price">¥620</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- スイーツ -->
+    <section class="menu-section menu-section--alt" aria-labelledby="sweets-title">
+      <div class="inner">
+        <div class="menu-section__header">
+          <p class="eyebrow">Sweets</p>
+          <h2 class="section-title" id="sweets-title">スイーツ</h2>
+        </div>
+        <ul class="menu-grid">
+          <li class="menu-card">
+            <div class="menu-card__emoji" aria-hidden="true">🍰</div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">きなこのロールケーキ</h3>
+              <p class="menu-card__desc">きなこクリームをたっぷり巻いたふわふわロールケーキ。きなこちゃんのまあるい体をイメージ。</p>
+              <span class="menu-card__price">¥580</span>
+            </div>
+          </li>
+          <li class="menu-card">
+            <div class="menu-card__emoji" aria-hidden="true">🧁</div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">うめ吉の梅スコーン</h3>
+              <p class="menu-card__desc">京北産の梅を練り込んだ自家製スコーン。クロテッドクリームと一緒にどうぞ。</p>
+              <span class="menu-card__price">¥480</span>
+            </div>
+          </li>
+          <li class="menu-card">
+            <div class="menu-card__emoji" aria-hidden="true">🍮</div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">森のプリン</h3>
+              <p class="menu-card__desc">濃厚な卵と牛乳で作った昔ながらのかための焼きプリン。苦めカラメルがアクセント。</p>
+              <span class="menu-card__price">¥520</span>
+            </div>
+          </li>
+          <li class="menu-card">
+            <div class="menu-card__emoji" aria-hidden="true">🍪</div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">ねこ型クッキー</h3>
+              <p class="menu-card__desc">じったん・うめ吉・きなこ・みどりをかたどったバタークッキー。お土産にも人気。</p>
+              <span class="menu-card__price">¥400（4枚入り）</span>
+            </div>
+          </li>
+          <li class="menu-card">
+            <div class="menu-card__emoji" aria-hidden="true">🫙</div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">みどりの抹茶パフェ</h3>
+              <p class="menu-card__desc">京都産の抹茶を使ったグリーンパフェ。みどりちゃんの目の色をイメージした季節限定品。</p>
+              <span class="menu-card__price">¥780</span>
+            </div>
+          </li>
+          <li class="menu-card menu-card--note">
+            <div class="menu-card__emoji" aria-hidden="true">📝</div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">ご注文について</h3>
+              <p class="menu-card__desc">ドリンクは1オーダー制です。スイーツは単品またはドリンクとのセット（￥100引き）でご注文いただけます。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="reserve" aria-labelledby="menu-cta-title">
+      <h2 class="cta__title" id="menu-cta-title">気になるメニューは<br><em>見つかりましたか？</em></h2>
+      <p class="cta__sub">ご予約のうえ、ぜひ会いに来てください</p>
+      <a class="btn btn--cta" href="index.html#reserve">予約する ›</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Cafe Fluffy</strong> &nbsp;|&nbsp; 京都府京都市右京区京北 &nbsp;|&nbsp; © 2026 Cafe Fluffy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

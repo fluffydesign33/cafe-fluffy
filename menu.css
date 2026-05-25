@@ -1,0 +1,124 @@
+/* ===========================
+   Page Hero
+=========================== */
+.page-hero {
+  min-height: 40vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 8rem 1.5rem 4rem;
+  background: var(--mist);
+}
+
+.page-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  color: var(--bark);
+  line-height: 1;
+  margin-bottom: .6rem;
+}
+
+.page-hero__sub {
+  font-size: .9rem;
+  color: var(--bark);
+  opacity: .75;
+  line-height: 1.9;
+  margin-top: .8rem;
+}
+
+/* ===========================
+   Menu Section
+=========================== */
+.menu-section {
+  padding: var(--section-padding);
+  background: var(--white);
+}
+
+.menu-section--alt {
+  background: var(--mist);
+}
+
+.menu-section__header {
+  margin-bottom: 2.5rem;
+}
+
+/* ===========================
+   Menu Grid
+=========================== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+/* ===========================
+   Menu Card
+=========================== */
+.menu-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  border: 1px solid var(--sand);
+  transition: transform .25s, box-shadow .25s;
+}
+
+.menu-section--alt .menu-card {
+  background: var(--white);
+}
+
+.menu-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(92,61,46,.08);
+}
+
+.menu-card--note {
+  background: var(--pink-light);
+  border-color: var(--pink);
+}
+
+.menu-card__emoji {
+  font-size: 2rem;
+  flex-shrink: 0;
+  width: 2.5rem;
+  text-align: center;
+}
+
+.menu-card__body {
+  flex: 1;
+}
+
+.menu-card__name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--bark);
+  margin-bottom: .3rem;
+}
+
+.menu-card__desc {
+  font-size: .78rem;
+  color: var(--bark);
+  opacity: .72;
+  line-height: 1.7;
+  margin-bottom: .6rem;
+}
+
+.menu-card__price {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--wine);
+  font-weight: 400;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
